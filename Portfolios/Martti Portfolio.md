@@ -2,7 +2,7 @@
 ### Student name: Martti Groenen<!-- omit in toc -->
 ### Student number: 19174837<!-- omit in toc -->
 
-This document describes my progress, contributions and reflection of the OrthoEyes 2020 project, as well as background information about the project.
+This is Martti Groenens portfolio for Applied Data Science. This is where I document my skills and achievements that I acquired during this minor.
 
 # <a id="table-of-contents"></a>Table of Contents <!-- omit in toc -->
 - [Obligatory Criteria](#obligatory-criteria)
@@ -35,41 +35,9 @@ This document describes my progress, contributions and reflection of the OrthoEy
 # Obligatory Criteria
 ## Datacamp assignments
 
-- Pandas Foundation
+- 5 / 12 / 2022 Datacamp progress
 
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/191ae7b0e88d5a01c2fe3b170f0de4223b59cea8)
-
-- Manipulating DataFrames with pandas
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/c3fa774860c87b6e84dd4389164b5b472eb69b42)
-
-- Introduction to Data Visualization in Python
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/44b629ff307d16bfd3f76bd95e689fe5f1c18a40)
-
-- Preprocessing for Preprocessing for Machine Learning in Python
-    
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/9b11e6d7a7554ad8ff1963889a07c87a40b4aab5)
-
-- Data Types for Data Science in Python
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/2d8bb26091fa49e453ef56034ca17a901b70df19)
-
-- Cleaning Data in Python
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/70fbf61dba08f8b162f4939ea49e03425dbedd11)
-
-- Introduction to Python
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/f9c4ed638870ff224beb6a52894423fe728bdc3d)
-
-- Intermediate Python
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/6c07b815a7cb2b59032cddb0983cb114a85c1e48)
-
-- Python Data Science Toolbox (Part 1)
-
-    [Statement of accomplishment](https://www.datacamp.com/statement-of-accomplishment/course/767c4e5be465ac5faf0716dcb92563fd3fa3727f)
+  ![Statement of accomplishment](https://github.com/Marttico/HumanMachineTeachersFiles/blob/master/Portfolios/Datacamp/Martti%20Datacamp.png)
 
 
 [Back to Table of Contents](#table-of-contents)
