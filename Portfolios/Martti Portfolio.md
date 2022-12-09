@@ -42,36 +42,48 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 
 [Back to Table of Contents](#table-of-contents)
 ## Personal Reflection
-When I started with the project, part of the group was already a week in. This was due to me joining the group at a later time because there was a participation spot that came free when I started the other minor I was signed in for. This wasn't really a problem though, because I could easily catch up with the rest of the group.
+I started this minor with having a fair bit of catching up to do. This was because I actually switched minors twice. My group ended up helping me a lot and they showed me what material I missed. I also studied the slides that I had missed the week prior. 
 
-I didn't really have a specific role in the group. I did act like a 'back-end engineer' together with Danny. Together we did most of the coding for the [convenience library](code/lib/ortho_lib.py) we put together. I also already had some experience in machine learning and neural networks, so at times (mostly at the beginning) I could provide some extra information when it was needed. We worked in a free form of agile development from week 3 or 4 on, so we divided tasks at the start of the week, and we just carried them out.
+In the beginning I started off as the "coder" of the group. This meant that I did get off track at times, meaning that I chose style over substance. I noticed that style over substance habit of mine was not efficient at all. After a wake-up call from our teachers, I changed my approach. I made sure that I started off my programs small, and gradually and carefully added functionalities ontop of these programs. Using this approach meant that I could methodically add functionalities without breaking a program.
 
-Other tasks I worked on:
-- [Reconstructing the results from the original paper](notebooks/Reconstructie%20Paper%20Model.ipynb)
-- [A lot of visualization during the project](#visualization-and-further-exploration-of-the-data)
-- [Presentations](#presentations)
-- Feature selection
-- [Constructing the dichotomous classification tree](#dichotomous-tree-or-ensemble)
-- [Multinomial Logistic Regression](#multinomial-logistic-regression)
-- [Constructing the final experiment and results](notebooks/final_experiment.ipynb)
-- [Writing, but mostly reviewing, the paper](#paper)
+Here are some tasks I worked on per project:
+
+**FoodBoost**
+- [Filtered the dataset to drop recipes with nuts]()
+- [Applied a PCA model on our case]()
+- [Thought of a way to structure data for the final model]()
+- [Created a profile generator based on labels]()
+- [Created the first Decision Tree Classifier we trained]()
+
+**Containers**
+- [Created a GUI for the project using PyGame]()
+- [Created an underlying system for moving containers and checking whether the move is legal]()
+- [Created a function that converts list of containers to heightmap]()
+- [Created multiple environments]()
+- Created multiple agents [DQN](), [CNN (with Jesse)]()
+- [Changed our observation/action space]()
+
+
+- [REMOVE THIS](notebooks/Reconstructie%20Paper%20Model.ipynb)
+- [REMOVE THIS](#visualization-and-further-exploration-of-the-data)
+
 
 Here I will reflect on a situation using STARR:
-### **Updating the library to support more aggregation methods** <!-- omit in toc -->
+### **Changing our observation/action space in the container project** <!-- omit in toc -->
 #### **Situation** <!-- omit in toc -->
-To generate more kinds features, an expansion of the `ortho_lib` library is needed. All sequence aggregation methods of the `pandas` `DataFrame` class should be supported. Currently, the only supported methods are `min()` and `max()`. The method should still support specifying for which exercise types the feature should be generated.
+We noticed it took too long for our Deep Q Network to converge on a stable outcome. Sometimes the agent would not even find a stable outcome at all. 
 
 #### **Task** <!-- omit in toc -->
-To rewrite the `Patient` class to support all of the sequence aggregation methods.
+Find a new way for a Deep Q Network to more easily establish associations by changing our observation and action space.
 
 #### **Action** <!-- omit in toc -->
-I rewrote the `Patient` class to have a new input structure, in which the basic feature name could be specified, together with the mathematical operations to aggregate the column values. The exercise types could be specified as well. I also made a change to the naming of the generated feature.
+I changed the observation space of the container lot to show a heightmap of the containers. Furthermore I decided to make the actions a 2D matrix, instead of a 3D matrix. This was done since our agent could only put containers ontop of other containers. So there was no real use in having so many unusable actions our agent could take.
 
 #### **Results** <!-- omit in toc -->
-With this relatively small change, a lot more kinds of features can be generated. Some of the existing notebooks will have to be changed a little to support this change. 
+This change ended up causing our model to train way faster than it did before.
 
 #### **Reflection** <!-- omit in toc -->
-In this situation, I think I made a pretty large impact on the feature engineering part of the project. Where we could first only generate minimal and maximal column values through our library, we can now do any aggregation method. It has made it easy to generate large numbers of features, and I think that the group really profitted from this action, as it saves a lot of manual work.
+I think this change was a beneficial one. Since making this change showed me that taking a radically different perspective at a problem you're facing can be really advantageous.
 
 ## Personal Learning Objectives
 For this minor I mainly wanted to expand my knowledge on machine learning and neural networks. I was really happy when I received the message that I could join the minor, even after it started, because this was my favorite choice of minor in the first place. I already had some knowledge on ML and NN through online articles I read and YouTube videos I watched. I also ported a so-called Intent Parser (parses an intent from a written sentence) called Padatious from Python to Java. This system used a simple neural network. I did learn a lot during this minor though. The intricacies of developing, using and evaluating a machine learning algorithm were not new to me, but I did gain in-depth knowledge and I learned to apply the different methods correctly. 
