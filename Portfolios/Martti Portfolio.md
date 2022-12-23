@@ -15,16 +15,16 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
   - [Conculsions](#conculsions)
   - [Planning](#planning)
 - [2. Predictive Analysis](#2-predictive-analysis)
-  - [Dichotomous Tree with the OR-Ensemble](#dichotomous-tree-with-the-or-ensemble)
-  - [Multinomial Logistic Regression](#multinomial-logistic-regression)
-  - [Final OR-ensemble experiments](#final-or-ensemble-experiments)
+  
 - [3. Domain Knowledge](#3-domain-knowledge)
   - [Literature](#literature)
   - [Terminology](#terminology)
 - [4. Data Preprocessing](#4-data-preprocessing)
-  - [Exploring and explanation of the dataset](#exploring-and-explanation-of-the-dataset)
-  - [Exploring and explanation of existing code](#exploring-and-explanation-of-existing-code)
-  - [Visualization (and further exploration of the data)](#visualization-and-further-exploration-of-the-data)
+  - [Data preparation](#exploring-and-explanation-of-the-dataset)
+  - [Data Visualization](#exploring-and-explanation-of-existing-code)
+  - [Data collection](#visualization-and-further-exploration-of-the-data)
+  - [Evaluation](#evaluation)
+  - [Diagnostics](#diagnostics)
 - [5. Communication](#5-communication)
   - [Presentations](#presentations)
   - [Paper](#paper)
@@ -89,7 +89,7 @@ I think this change was a beneficial one. Since making this change showed me tha
 # 1. The Project
 
 [Back to Table of Contents](#table-of-contents)
-# 2. Predictive Analysis
+# 2. Predictive Models
 
 [Back to Table of Contents](#table-of-contents)
 # 3. Domain Knowledge
@@ -99,6 +99,14 @@ I think this change was a beneficial one. Since making this change showed me tha
 
 [Back to Table of Contents](#table-of-contents)
 # 5. Communication
+
+## Presentations
+
+During this minor I have presented about 3 to 4 presentations. 
+
+## Paper
+
+## Feedback
 
 - [Obligatory Criteria](#obligatory-criteria)
   - [Datacamp assignments](#datacamp-assignments)
