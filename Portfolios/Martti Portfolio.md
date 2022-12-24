@@ -104,7 +104,7 @@ The workflow of my PCA was simple.
 - Then I overlayed the known review values (the other 40% of the dataset that was not dropped) over the predicted dataset.
 - Upon this mixed dataset I then applied Singular Value Decomposition again. This time, after reconstructing the newly predicted dataset using the two generated matrices, the prediction got a little bit closer to the ground truth.
 
-By iteratively applying those steps (``SVD``, ``Matrix Multiplication``, and ``Overlay original numbers``) we're able to approach the ground truth. Hereby creating an accurate recommendation for a singular user using a huge dataset. This approach deemed too intricate  for first project. Thus we eventually used a different approach.
+By iteratively applying those steps (``SVD``, ``Matrix Multiplication``, and ``Overlay original numbers``) we're able to approach the ground truth. Hereby creating an accurate recommendation for a singular user using a huge dataset of reviews from other users. This approach deemed too intricate  for first project. Thus we eventually used a different approach.
 
 ### Decision Tree Classifier.
 
