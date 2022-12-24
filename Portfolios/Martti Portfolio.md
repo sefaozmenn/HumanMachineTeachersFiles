@@ -91,6 +91,44 @@ I think this change was a beneficial one. Since making this change showed me tha
 [Back to Table of Contents](#table-of-contents)
 # 2. Predictive Models
 
+I have made the following predictive models. I will seperate them per project.
+## Project Foodboost
+Project foodboost was mainly based around basic machine learning models. During this project I also experimented with Principle Component Analysis (PCA). These predictive models were eventually supposed to recommend recipes to users. 
+
+### PCA
+The workflow of my PCA was simple. 
+- Firstly, I created a "review" dataset, which included a lot of users. This dataset was generated through matrix multiplications. Due to these matrix multiplications, this dataset ended up having a specific structure. 
+- Afterwards, I randomly replaced 60% of the "review" dataset with ``NaN``. 
+- Then I replaced the ```NaN```'s with zero's and applied Singular Value Decomposition. Effectively, what this does is it splits the matrix into two seperate matrices.
+- Subsequently, I reconstructed the predicted "review" dataset out of the two matrices I created in the prior step. Do note, however, that these values are not close to the ground truth.
+- Then I overlayed the known review values (the other 40% of the dataset that was not dropped) over the predicted dataset.
+- Upon this mixed dataset I then applied Singular Value Decomposition again. This time, after reconstructing the newly predicted dataset using the two generated matrices, the prediction got a little bit closer to the ground truth.
+
+By iteratively applying those steps (``SVD``, ``Matrix Multiplication``, and ``Overlay original numbers``) we're able to approach the ground truth. Hereby creating an accurate recommendation for a singular user using a huge dataset. This approach deemed too intricate  for first project. Thus we eventually used a different approach.
+
+### Decision Tree Classifier.
+
+In the new version of this case, we used the Albert Heijn dataset to extract recipe information. This recipe information included ingredients and tags. Using this data, I created a predictive model that was able to train for recommendations for a singular user. To generate the data, I first had to define what tags the user liked, and what tags the user disliked. Using these tags, I was able to randomly pick recipes from those tags. I would extract the ingredients from these recipes, this would be the ``X`` dataset that our predictive model would train on. As for our ``y`` dataset, I set this to 0 for "disliking" a recipe and 1 for "liking" a recipe respectively. Therefore, I generated a dataset with a specific structure in it for our predictive model to train on. My project group decided on having everyone try a different classifier model on the generated dataset. I ended up using ``Decision Tree Classifier`` (as recommended by my group). Using a confusion matrix  to compare this with other models, we were able to deduct that a ``Decision Tree Classifier`` yielded the best results.
+
+## Project Containers
+
+Project containers used a completely different approach to a predictive model. Since this project heavily relied on reinforcement learning, I created my own [``Agent``](), [``Environment``](), and [``Neural Network``]() in pytorch. This environment ended up going through several different iterations. 
+
+### First iteration
+The first iteration was heavily based on having a good looking interface. This however, ended up being the thing that slowed the environment down way too much. Besides that, the environment was not created with a 3D matrix in mind, but rather a ``pandas`` dataframe with every entry being a container. This ended up taking up way too much time, and we ended up scrapping this too.
+
+### Second iteration
+
+The second iteration seemed to yield better results. I created a function that would convert a 3D matrix into a 2D heightmap. This heightmap would be interpreted by a basic ``Deep Q Network`` (DQN). I was able to train this model in such a way that it wouldn't attempt to put containers in illegal positions.
+
+### Third iteration
+
+Together with Jesse we created a third iteration. This iteration used roughly the same environment as the second iteration, however, we used a ``Convolutional Neural Network`` (CNN) to interpret the 2D heightmap. Using this approach ended up not working too well. We ended up scrapping this, due to a suggestion I will touch on in the next paragraph.
+
+### Fourth iteration
+
+The Fourth iteration seemed to perform way better than all previous iterations. We got a suggestion from ``Jeroen Vuurens`` that, instead of using a 2D heightmap, or a 3D matrix. We should use something that seperates the rows (X-axis) from the columns (Y-axis) and stacks (Z-axis). Using that clue, I created an environment that would allow the agent to choose between rows. Instead of choosing exactly where to put the container, I only let our agent choose which row to put it in, and the rest was handled by my environment. This approach ended up working really well.  
+
 [Back to Table of Contents](#table-of-contents)
 # 3. Domain Knowledge
 
