@@ -46,20 +46,21 @@ I started this minor with having a fair bit of catching up to do. This was becau
 
 In the beginning I started off as the "coder" of the group. This meant that I did get off track at times, meaning that I chose style over substance. I noticed that style over substance habit of mine was not efficient at all. After a wake-up call from our teachers, I changed my approach. I made sure that I started off my programs small, and gradually and carefully added functionalities ontop of these programs. Using this approach meant that I could methodically add functionalities without breaking a program.
 
-### **STARR:** 
+### **STARR: I put style over substance** 
 #### **Situation**
-
+I created a lot of nice looking visualisations of our plot container project. However, the underlaying code ended up being way too slow and buggy.
 
 #### **Task**
-
+Simply put, I needed to find a more effective way to work. This current method made visualising and debugging the code way harder than it had to be.
 
 #### **Action**
-
+I rewrote the entire code from scratch. Creating small and basic functions that I could use in the bigger picture. This meant that I had a stable base to build upon. This way I knew the code was more efficient and less buggy. Furthermore, instead of rendering the results to the screen. I saved them to a file. This way I could visualise them after the fact, thus not impacting the programs performance.
 
 #### **Results**
-
+This method generated a stable base for me to iteratively build on. Whereupon I eventually had a more efficient program.
 
 #### **Reflection**
+I think this was a good method of fixing the situation. After having this stable base, I could make things look pretty and neat. I noticed that rigorously testing a small part was a good way to write working code. Another nice feature of this workflow, was if I found an unusual output, something I didn't expect. I could trace it back and find out which part of the code contained the bug.
 
 ## Learning Objectives
 For this project I set the following learning objectives when I started:
