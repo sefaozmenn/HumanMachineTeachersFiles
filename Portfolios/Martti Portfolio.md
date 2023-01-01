@@ -237,7 +237,7 @@ def filterFunc(inputString):
             return True
     return False
 ```
-<details><summary>Code explanation</summary>This function first checks whether the inputString contains a false positive. If it does, it returns ``False``. If it doesn't contain a false postive, it checks whether the inputString contains the one of the ingredients that contain nuts. If it does contain nuts, it returns a ``True``, else it returns ``False``. </details>
+<details><summary>Code explanation</summary>This function first checks whether the inputString contains a false positive. If it does, it returns False. If it doesn't contain a false postive, it checks whether the inputString contains the one of the ingredients that contain nuts. If it does contain nuts, it returns a True, else it returns False. </details>
 
 
 The `ingredients.csv` dataset was laid out like this:
@@ -281,7 +281,15 @@ for i in notenDict:
 outputDF = pd.DataFrame.from_dict(notenDict,orient='index')
 print(outputDF.head())
 ```
-<details><summary>Code explanation</summary>Our code iteratively checks every row of ingredients.csv</details>
+<details><summary>Thorough code explanation</summary>Our code iteratively checks every row of ingredients.csv. If the dictionary we created does not contain an entry for the current recipe, it gets added with a value of False. Afterwards, it checks whether the current ingredient being checked contains nuts using the filterFunc() function I showed before. This creates a dictionary with a True for every recipe that contains nuts, and a False for every recipe that doesn't contain nuts.</details>
+
+This code effectively marks every recipe that contains nuts. Do bare in mind however, that this is a prototype. In reality, there could be way more types of nuts that we haven't added to the "ban list".
+Finally, we can drop every row that has a recipe that contains nuts.
+
+### Preparing the data
+With the filtered dataset generated, we can now focus on preparing the data so we can feed it through to the Machine Learning algorithm. A Machine Learning algorithm takes two datasets, an ``X`` and a ``y`` dataset. The ``X`` dataset contains features, and a ``y`` dataset contains the value we want to predict. From this point forward, I'll call the dataset we want to feed to the Machine Learning algorithm ``preference dataset``. The ``X`` of our ``preference dataset`` should contain the ingredients of a recipe, and the ``y`` of our ``preference dataset`` should be a boolean value indicating whether the user likes the recipe or not.
+
+To generate an artificial list of recipes the user would like and dislike, I chose certain tags from the ``tags.csv`` dataset. For instance, our user likes the tag ``italiaans`` and dislikes the tag ``frans``. In this case, we'd add 10 randomly chosen recipes with the ``italiaans`` tag with a ``y`` boolean of `1` to the ``preference dataset``. Afterwards, we'll do the same for the ``frans`` recipes, instead changing the ``y`` to `0` for these entries. 
 
 
 
