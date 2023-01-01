@@ -289,7 +289,7 @@ Finally, we can drop every row that has a recipe that contains nuts.
 ### Preparing the data
 With the filtered dataset generated, we can now focus on preparing the data so we can feed it through to the Machine Learning algorithm. A Machine Learning algorithm takes two datasets, an ``X`` and a ``y`` dataset. The ``X`` dataset contains features, and a ``y`` dataset contains the value we want to predict. From this point forward, I'll call the dataset we want to feed to the Machine Learning algorithm ``preference dataset``. The ``X`` of our ``preference dataset`` should contain the ingredients of a recipe, and the ``y`` of our ``preference dataset`` should be a boolean value indicating whether the user likes the recipe or not.
 
-To generate an artificial list of recipes the user would like and dislike, I chose certain tags from the ``tags.csv`` dataset. For instance, our user likes the tag "italiaans" and dislikes the tag "frans". In this case, we'd add 10 randomly chosen recipes with the "italiaans" tag with a ``y`` boolean of `1` to the ``preference dataset``. Afterwards, we'll do the same for the "frans" recipes, instead changing the ``y`` to `0` for these entries. 
+To generate an artificial list of recipes the user would like and dislike, I chose certain tags from the ``tags.csv`` dataset. For instance, our user likes the tag "italiaans" and dislikes the tag "frans". In this case, we'd add 10 randomly chosen recipes with the "italiaans" tag with a ``y`` of True to the ``preference dataset``. Afterwards, we'll do the same for the "frans" recipes, instead changing the ``y`` to False for these entries. 
 
 
 
