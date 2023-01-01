@@ -70,21 +70,21 @@ For this project I set the following learning objectives when I started:
 
 Through the Applied Data Science minor program, I was able to develop a strong foundation in Python programming and data analysis techniques. I had some experience with Python beforehand, but I was able to deepen my understanding and skills through coursework and hands-on projects. I applied the skills I learned in the lectures in a real-world setting through a project using Albert Heijn recipe data and tags to create a recipe recommendation system for people with specific tastes. I gained hands-on experience with various data science tools and technologies, including Pandas, Matplotlib, and Numpy through Datacamp.
 
-### **STARR:** 
+### **STARR: Asking for help** 
 #### **Situation**
-
+I was not making as much progress as I'd like on Datacamp.
 
 #### **Task**
-
+My task was to finish the current week of datacamp courses.
 
 #### **Action**
-
+I ended up reaching out to my teammates for help with the courses. 
 
 #### **Results**
-
+The result of this action was that my teammates helped me with the parts I struggled with. They thoroughly explained what I did wrong and where I went wrong. Furthermore I ended up finishing the courses with ease while still learning about Data Science.
 
 #### **Reflection**
-
+I think the approach I took was definitely good. I don't think I'd choose a different action the next time I get into this situation. Of course this does assume I've got a group of students following the same course there to help me. If I wouldn't have this, I'd have chosen a different approach.
 
 ## Group Reflection/Evaluation
 I really enjoyed working with my project group. This has been one of the better groups I've done projects with. However, this does not mean this entire project went without a hitch. In the sections below, I will be evaluating each project member seperately.
@@ -219,7 +219,79 @@ There are two features to this graph that need some explaining. First off the th
 
 [Back to Table of Contents](#table-of-contents)
 # 4. Data Preprocessing
-\<Insert Data Preprocessing>
+Here I will cover the data preprocessing for the two projects I've worked on.
+## Project Foodboost
+For project Foodboost, we were given a lot of recipe data. In our case, not all of this data was useful. Eventually we ended up only using the `ingredients.csv` and `tags.csv` dataset.
+
+### Filtering nuts
+To filter out the nuts, I created a simple function to determine whether an ingredient contains nuts or not. 
+```py
+def filterFunc(inputString):
+    notenLijst = ["noot","pinda","eikel","amandel","cashew","hazelno","hican","hickory","kemirie","macadamia","nangaino","parano","pecan","pistache","kastanje","walnoot","betelno","beukenno"]
+    falsePositives = ["muskaat"]
+    for i in falsePositives:
+        if i in inputString:
+            return False
+    for o in notenLijst:
+        if o in inputString:
+            return True
+    return False
+```
+<details><summary>Code explanation</summary>This function first checks whether the inputString contains a false positive. If it does, it returns ``False``. If it doesn't contain a false postive, it checks whether the inputString contains the one of the ingredients that contain nuts. If it does contain nuts, it returns a ``True``, else it returns ``False``. </details>
+
+
+The `ingredients.csv` dataset was laid out like this:
+| nr | recipe                        | ingredient       | quantity | unit |
+|----|-------------------------------|------------------|----------|------|
+| 0  | Kruidnoten met choco-discodip | melkchocolade    | 100.0    | g    |
+| 1  | Kruidnoten met choco-discodip | kruidnoten       | 100.0    | g    |
+| 2  | Kruidnoten in marsepein       | blanke marsepein | 150.0    | g    |
+
+I iterated over every row of this ``ingredients.csv`` dataset. This code uses the function ``filterFunc()`` I created.
+```py
+#Import dataset to df
+df = pd.read_csv('Datasets Foodboost/ingredients.csv')
+
+#Create empty dictionary
+notenDict = {}
+
+#Create empty lists
+safeList = []
+unsafeList = []
+
+#Iterate over every row in the dataset
+for i in df.itertuples():
+    #If the recipe is not in the ductionary, add it.
+    if not i[2] in notenDict.keys():
+        notenDict[i[2]] = False
+    
+    #If the current row has an ingredient that contains nuts, set the ingredient in the dictionary to True
+    if filterFunc(i[3]):
+        notenDict[i[2]] = True
+
+#Append recipes to corresponding lists.
+for i in notenDict:
+    
+    if notenDict[i]:
+        unsafeList.append(i)
+    else:
+        safeList.append(i)
+        
+#Convert Dictionary to DataFrame
+outputDF = pd.DataFrame.from_dict(notenDict,orient='index')
+print(outputDF.head())
+```
+<details><summary>Code explanation</summary>Our code iteratively checks every row of ingredients.csv</details>
+
+
+
+## Project Containers
+Data preprocessing is a little bit different when it comes to reinforcement learning. The way our RL-agent learns is through observing the effect of its actions. This means I have to first collect data.
+### Data collection
+Our reinforcement learning algorithm has a parameter ``epsilon``. This parameter is used to choose whether a random action is chosen or whether the neural network chooses the action. At the beginning of the training process, the epsilon is fairly high (near 1). An epsilon near 1 means that pretty much all the moves the agent chooses are random. When this parameter is decreased, the neural network will take more and more "calculated" actions.
+
+The second important thing our RL-agent does is it remembers its previous moves, outcomes and rewards. This collection of data is called our memory, thus effectively being our ``X`` and ``y`` dataset. 
+
 [Back to Table of Contents](#table-of-contents)
 # 5. Communication
 
