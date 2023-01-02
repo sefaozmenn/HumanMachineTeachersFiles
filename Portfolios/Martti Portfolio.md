@@ -153,7 +153,7 @@ I noticed it took too long for our Deep Q Network to converge on a stable outcom
 Find a new way for a Deep Q Network to more easily establish associations by changing our observation and action space.
 
 #### **Action** 
-I changed the observation space of the container lot to show a heightmap of the containers. Furthermore I decided to make the actions a 2D matrix, instead of a 3D matrix. This was done since our agent could only put containers ontop of other containers. So there was no real use in having so many unusable actions our agent could take.
+I changed the observation space of the container plot to show a heightmap of the containers. Furthermore I decided to make the actions a 2D matrix, instead of a 3D matrix. This was done since our agent could only put containers ontop of other containers. So there was no real use in having so many unusable actions our agent could take.
 
 #### **Results** 
 This change ended up causing our model to train way faster than it did before.
@@ -165,15 +165,100 @@ I think this change was a beneficial one. Since making this change showed me tha
 
 
 [Back to Table of Contents](#table-of-contents)
-# 1. The Project
-\<Insert project text>
+# 1. The Project | 100% done
+There were two projects we worked on. The first project is Foodboost, and the second project is containers. I will cover both of them seperately here.
+## Foodboost
+Project foodboost was aimed at creating a recommendation system for users with a nut allergy. This project benefits me personally, since there's often a limited choice for me when it comes to food.
+
+For project foodboost, we set the following research questions:
+1. What ingredients can be considered as a nut?
+2. What is an average amount of calories for lunch and dinner combined?
+3. What method is used/can be used for predicting if someone likes a specific recipe?
+4. What method can be used to make a diet schedule with as much variety as possible?
+
+### Future work
+In the future, this project could be expanded upon by creating modifiable filters. So not only people with nut allergies can use this program, but also people with gluten allergies or a lactose intolerance.
+
+### Conclusions
+
+#### 1. What ingredients can be considered as a nut?
+
+We did some research on what ingredients can be considered a nut. Through this research, we compiled a list of ingredients that we should avoid. This list can be applied to filter out the recipes that contain nuts. Furthermore, we found out that filtering out nuts is not as easy as filtering any recipe that includes an ingredient with the word ``noot``. Since ``nootmuskaat`` is not a nut, we had to also create a list with false positive ingredients.
+
+#### 2. What is an average amount of calories for lunch and dinner combined?
+
+Our research concluded that the average amount of calories of lunch and dinner combined lands around 1040 Kcal. As shown in the boxplot below, the average dinner is around 575 Kcal, and the average lunch is around 465 Kcal. 
+<details><summary>Boxplot</summary><img src="images/FoodBoostBoxplot.png"></details>
+
+The barplot below shows the distribution of Kcal for lunch and dinner.
+<details><summary>Barplot</summary><img src="images/BarplotKcal.png"></details>
+
+
+#### 3. What method is used/can be used for predicting if someone likes a specific recipe?
+
+For our project, we trained a Decision Tree Algorithm on a dataset that contains recipe ingredients the user likes, and recipe ingredients the user dislikes. Using this data, the Decision Tree Algorithm then predicts whether the user likes or dislikes unseen recipes.
+
+#### 4. What method can be used to make a diet schedule with as much variety as possible?
+
+To create a diet schedule with as much variety as possible, we used a Linear Programming model. This model used restrictions to not serve the user the same recipe every day, and a restriction that makes sure that the combined Kcal of dinner and lunch is below 1040. The model was only allowed to choose one lunch and one dinner recipe per day.
+
+### Planning
+In the beginning, our plan was to use trello as a place where we could update each other on the advancements we made on our project. Eventually, we ended up forgetting about trello entirely, since we had to focus on getting things done rather than planning.
+<details><summary>Planning Foodboost</summary><img src="images/trellofood.png"></details>
+
+## Containers
+This case covers the sorting problem when it comes to unloading and loading containers between ship and shore. 
+
+For project containers, we set the following research questions:
+
+1. What methods are viable to solve the container stacking problem?
+2. What is a move, and what are the restrictions?
+3. What type of containers do we have to use?
+4. How is the port layed out?
+5. How can we simulate container data?
+
+### Future work
+Future work could build upon our model. For instance, the environment could be modified so the agent could select between several ship containers. This would make it so the agent could more efficiently create layouts. Besides this, we also only focused on offloading the containers. We didn't focus on container management on shore, or when loading containers onto ships.
+
+### Conclusions
+#### 1. What methods are viable to solve the container stacking problem?
+
+The method we used to solve the container stacking problem is using a Reinforcement Learning algorithm called DQN. This algorithm remembers the rewards of the previous moves and optimizes this reward.
+
+#### 2. What is a move, and what are the restrictions?
+
+A move in our environment is placing a container in a legal spot in a container lot. The restrictions are as follows: there may not be a container north and south of the container our agent is trying to place. Furthermore there may not be a container in the spot the agent is trying to place a container. Lastly the container may not be floating.
+<details><summary>Restriction Images</summary>
+Container may not exceed max height<br>
+<img src="images/Container1.png" height=400px><br>
+Container may not be floating<br>
+<img src="images/Container2.png" height=400px><br>
+Container may not be inside another container<br>
+<img src="images/Container3.png" height=400px><br></details>
+
+#### 3. What type of containers do we have to use?
+
+For this project, we used the standard 20ft container. This ended up not being too useful for our final product, but we did specifically chose this container since it's the standard for pretty much all shipping containers. 
+
+#### 4. How is the port layed out?
+
+We did find out the layout of the port, however, we ended up not using this layout and focusing on a smaller container plot first. 
+
+#### 5. How can we simulate container data?
+
+Our model uses priority tags for every container. The priority tag pertains to what order the containers have to leave the plot again. The way we simulate container data, is by applying random integer priorities within a specific range to every container on the incoming ship. 
+
+### Planning
+For this project we also decided on using Trello again. Eventually though, we forgot about it again. Nevertheless, we all knew what was going on and what the tasks were that we had to complete.
+<details><summary>Planning Containers</summary><img src="images/trello.png"></details>
+
 
 [Back to Table of Contents](#table-of-contents)
-# 2. Predictive Models
+# 2. Predictive Models | 90% done
 
 I have made the following predictive models. I will seperate them per project.
 ## Project Foodboost
-Project foodboost was mainly based around basic machine learning models. During this project I also experimented with Principle Component Analysis (PCA). These predictive models were eventually supposed to recommend recipes to users. 
+Project foodboost was mainly based around basic machine learning models. During this project I also experimented with Principal Component Analysis (PCA). These predictive models were eventually supposed to recommend recipes to users. 
 
 ### PCA 
 The workflow of my PCA was simple. 
@@ -185,6 +270,8 @@ The workflow of my PCA was simple.
 - Upon this mixed dataset I then applied Singular Value Decomposition again. This time, after reconstructing the newly predicted dataset using the two generated matrices, the prediction got a little bit closer to the ground truth.
 
 By iteratively applying those steps (``SVD``, ``Matrix Multiplication``, and ``Overlay original numbers``) we're able to approach the ground truth. Hereby creating an accurate recommendation for a singular user using a huge dataset of reviews from other users. This approach deemed too intricate  for first project. Thus we eventually used a different approach.
+
+This approach was based on a 2022 [paper written by Trevor Hastie, Michael Greenacre, and Patrick Groenen](https://www.nature.com/articles/s43586-022-00184-w)
 
 ### Decision Tree Classifier.
 
@@ -214,11 +301,11 @@ The Fourth iteration seemed to perform way better than all previous iterations. 
 There are two features to this graph that need some explaining. First off the theoretical maximum is based on the absolute maximum score that our environment can put out. Our model will never be able to score beyond that value. Secondly, these 79200 games took around one and a half hours to complete. This may seem long, however, this does not impact the eventual prediction speed.
 
 [Back to Table of Contents](#table-of-contents)
-# 3. Domain Knowledge
+# 3. Domain Knowledge | 0% done
 \<Insert Domain knowledge>
 
 [Back to Table of Contents](#table-of-contents)
-# 4. Data Preprocessing
+# 4. Data Preprocessing | 80% done
 Here I will cover the data preprocessing for the two projects I've worked on.
 ## Project Foodboost
 For project Foodboost, we were given a lot of recipe data. In our case, not all of this data was useful. Eventually we ended up only using the `ingredients.csv` and `tags.csv` dataset.
@@ -237,7 +324,9 @@ def filterFunc(inputString):
             return True
     return False
 ```
-<details><summary>Code explanation</summary>This function first checks whether the inputString contains a false positive. If it does, it returns False. If it doesn't contain a false postive, it checks whether the inputString contains the one of the ingredients that contain nuts. If it does contain nuts, it returns a True, else it returns False. </details>
+This code returns True if the string contains a word commonly associated with nuts and False if it doesn't.
+<details><summary>Thorough code explanation</summary>This function first checks whether the inputString contains a false positive. If it does, it returns False. If it doesn't contain a false postive, it checks whether the inputString contains the one of the ingredients that contain nuts. If it does contain nuts, it returns a True, else it returns False. </details><br>
+
 
 
 The `ingredients.csv` dataset was laid out like this:
@@ -269,36 +358,36 @@ for i in df.itertuples():
     if filterFunc(i[3]):
         notenDict[i[2]] = True
 
-#Append recipes to corresponding lists.
-for i in notenDict:
-    
-    if notenDict[i]:
-        unsafeList.append(i)
-    else:
-        safeList.append(i)
-        
 #Convert Dictionary to DataFrame
 outputDF = pd.DataFrame.from_dict(notenDict,orient='index')
 print(outputDF.head())
 ```
-<details><summary>Thorough code explanation</summary>Our code iteratively checks every row of ingredients.csv. If the dictionary we created does not contain an entry for the current recipe, it gets added with a value of False. Afterwards, it checks whether the current ingredient being checked contains nuts using the filterFunc() function I showed before. This creates a dictionary with a True for every recipe that contains nuts, and a False for every recipe that doesn't contain nuts.</details>
-
 This code effectively marks every recipe that contains nuts. Do bare in mind however, that this is a prototype. In reality, there could be way more types of nuts that we haven't added to the "ban list".
+<details><summary>Thorough code explanation</summary>Our code iteratively checks every row of ingredients.csv. If the dictionary we created does not contain an entry for the current recipe, it gets added with a value of False. Afterwards, it checks whether the current ingredient being checked contains nuts using the filterFunc() function I showed before. This creates a dictionary with a True for every recipe that contains nuts, and a False for every recipe that doesn't contain nuts.</details><br>
+
+
 Finally, we can drop every row that has a recipe that contains nuts.
 
-### Preparing the data
+To further clean the data and get more accurate results, we also removed all ingredients that had less than 40 entries. 
+
+### Preparing and explaining the data
 With the filtered dataset generated, we can now focus on preparing the data so we can feed it through to the Machine Learning algorithm. A Machine Learning algorithm takes two datasets, an ``X`` and a ``y`` dataset. The ``X`` dataset contains features, and a ``y`` dataset contains the value we want to predict. From this point forward, I'll call the dataset we want to feed to the Machine Learning algorithm ``preference dataset``. The ``X`` of our ``preference dataset`` should contain the ingredients of a recipe, and the ``y`` of our ``preference dataset`` should be a boolean value indicating whether the user likes the recipe or not.
 
-To generate an artificial list of recipes the user would like and dislike, I chose certain tags from the ``tags.csv`` dataset. For instance, our user likes the tag "italiaans" and dislikes the tag "frans". In this case, we'd add 10 randomly chosen recipes with the "italiaans" tag with a ``y`` of True to the ``preference dataset``. Afterwards, we'll do the same for the "frans" recipes, instead changing the ``y`` to False for these entries. 
+To generate an artificial list of recipes the user would like and dislike, I chose certain tags from the ``tags.csv`` dataset. For instance, our user likes the tag "italiaans" and dislikes the tag "frans". In this case, we'd add 20 randomly chosen recipes with the "italiaans" tag with a ``y`` of True to the ``preference dataset``. Afterwards, we'll do the same for the "frans" recipes, instead changing the ``y`` to False for these entries. 
 
+After this, we split the ``preference dataset`` into a train, test and validation dataset. This is done so we can evaluate our model.
 
 
 ## Project Containers
-Data preprocessing is a little bit different when it comes to reinforcement learning. The way our RL-agent learns is through observing the effect of its actions. This means I have to first collect data.
+Data preprocessing is a little bit different when it comes to reinforcement learning. The way our RL-agent learns is through observing the effect of its actions on a specific environment. This means I have to first collect data to train on.
+
 ### Data collection
 Our reinforcement learning algorithm has a parameter ``epsilon``. This parameter is used to choose whether a random action is chosen or whether the neural network chooses the action. At the beginning of the training process, the epsilon is fairly high (near 1). An epsilon near 1 means that pretty much all the moves the agent chooses are random. When this parameter is decreased, the neural network will take more and more "calculated" actions.
 
 The second important thing our RL-agent does is it remembers its previous moves, outcomes and rewards. This collection of data is called our memory, thus effectively being our ``X`` and ``y`` dataset. 
+
+To visualise the outcome of our game, I created a render of these containers.
+<video src="images/FullSolution0001-0080.mp4" controls="controls" style="max-width: 730px;"></video>
 
 [Back to Table of Contents](#table-of-contents)
 # 5. Communication
