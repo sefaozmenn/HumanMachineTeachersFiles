@@ -211,7 +211,7 @@ This case covers the sorting problem when it comes to unloading and loading cont
 
 For project containers, we set the following research questions:
 
-1. What methods are viable to solve the container stacking problem?
+1. What methods are aviable to solve the container stacking problem?
 2. What is a move, and what are the restrictions?
 3. What type of containers do we have to use?
 4. How is the port layed out?
@@ -221,7 +221,7 @@ For project containers, we set the following research questions:
 Future work could build upon our model. For instance, the environment could be modified so the agent could select between several ship containers. This would make it so the agent could more efficiently create layouts. Besides this, we also only focused on offloading the containers. We didn't focus on container management on shore, or when loading containers onto ships.
 
 ### Conclusions
-#### 1. What methods are viable to solve the container stacking problem?
+#### 1. What methods are aviable to solve the container stacking problem?
 
 The method we used to solve the container stacking problem is using a Reinforcement Learning algorithm called DQN. This algorithm remembers the rewards of the previous moves and optimizes this reward.
 
@@ -301,8 +301,31 @@ The Fourth iteration seemed to perform way better than all previous iterations. 
 There are two features to this graph that need some explaining. First off the theoretical maximum is based on the absolute maximum score that our environment can put out. Our model will never be able to score beyond that value. Secondly, these 79200 games took around one and a half hours to complete. This may seem long, however, this does not impact the eventual prediction speed.
 
 [Back to Table of Contents](#table-of-contents)
-# 3. Domain Knowledge | 0% done
-\<Insert Domain knowledge>
+# 3. Domain Knowledge | 70% done
+Foodboost applies data science is mainly aimed towards end users and their diets. Because we're dealing with allergens, there needs to be a clear understanding what ingredients contain nuts and which ones don't. This is why the first research question for this project is ``1. What ingredients can be considered as a nut?``. 
+
+The container project applies data science to logistics transportation. Our project is based around sorting containers in a plot, and effectively and efficiently creating a layout for this plot to reduce the time it takes to unload containers. It is imperative for this process to be efficient, since when a ship is a few minutes late, they risk getting hefty fines.
+
+
+## Literature
+For the first project, I mainly got my knowledge from Datacamp. Besides that, I also used scikit-learn's website find the documentation for the classifiers we needed
+* [Decision Tree Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+
+There was a seperate version of our program that we didn't use, but that was based on the following paper.
+
+* [Principal Component Analysis](https://www.nature.com/articles/s43586-022-00184-w)
+
+For the second project, I watched some tutorials on youtube about creating reinforcement learning models in Python. I gained a lot of insight into what a DQN is and how it works:
+
+* [Deep Q Learning is Simple with PyTorch | Full Tutorial 2020](https://www.youtube.com/watch?v=wc-FxNENg9U&t=1629s) 
+* [Introduction to Reinforcement Learning - Cartpole DQN](https://youtu.be/D795oNqa-Vk)
+
+Furthermore, I also read a few articles about DQN from pytorch itself:
+* [REINFORCEMENT LEARNING (DQN) TUTORIAL](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
+* [Q-Learning](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-learning)
+
+## Terminology
+
 
 [Back to Table of Contents](#table-of-contents)
 # 4. Data Preprocessing | 80% done
