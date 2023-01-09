@@ -8,24 +8,21 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 - [Obligatory Criteria](#obligatory-criteria)
   - [Datacamp assignments](#datacamp-assignments)
   - [Personal Reflection](#personal-reflection)
-  - [Personal Learning Objectives](#personal-learning-objectives)
-  - [Group Reflection/Evaluation](#group-reflection/evaluation)
-- [1. The Project](#1-the-project)
-  - [Future work](#future-work)
-  - [Conculsions](#conculsions)
-  - [Planning](#planning)
-- [2. Predictive Analysis](#2-predictive-analysis)
-  
-- [3. Domain Knowledge](#3-domain-knowledge)
-  - [Literature](#literature)
-  - [Terminology](#terminology)
-- [4. Data Preprocessing](#4-data-preprocessing)
-  - [Data preparation](#exploring-and-explanation-of-the-dataset)
-  - [Data Visualization](#exploring-and-explanation-of-existing-code)
-  - [Data collection](#visualization-and-further-exploration-of-the-data)
-  - [Evaluation](#evaluation)
-  - [Diagnostics](#diagnostics)
-- [5. Communication](#5-communication)
+  - [Learning Objectives](#learning-objectives)
+  - [Evaluation of the group project](#evaluation-of-the-group-project)
+- [1. The Project](#the-project)
+  - [Foodboost](#the-project-foodboost)
+  - [Containers](#the-project-containers)
+- [2. Predictive Analysis](#predictive-models)
+  - [Foodboost (PCA/Decision Tree Classifier)](#predictive-models-foodboost)
+  - [Container (Reinforcement Learning)](#predictive-models-containers)
+- [3. Domain Knowledge](#domain-knowledge)
+  - [Literature](#domain-knowledge-literature)
+  - [Terminology](#domain-knowledge-terminology)
+- [4. Data Preprocessing](#data-preprocessing)
+  - [Foodboost](#data-preprocessing-foodboost)
+  - [Containers](#data-preprocessing-containers)
+- [5. Communication](#communication)
   - [Presentations](#presentations)
   - [Paper](#paper)
   - [Feedback](#feedback)
@@ -33,7 +30,7 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 ---
 
 # <a id="obligatory-criteria"></a>Obligatory Criteria
-## Datacamp assignments
+## <a id="datacamp-assignments"></a>Datacamp assignments
 
 - 5 / 12 / 2022 Datacamp progress
 
@@ -41,7 +38,7 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 
 
 [Back to Table of Contents](#table-of-contents)
-## Personal Reflection
+## <a id="personal-reflection"></a>Personal Reflection
 I started this minor with having a fair bit of catching up to do. This was because I actually switched minors twice. My group ended up helping me a lot and they showed me what material I missed. I also studied the slides that I had missed the week prior. 
 
 In the beginning I started off as the "coder" of the group. This meant that I did get off track at times, meaning that I chose style over substance. I noticed that style over substance habit of mine was not efficient at all. After a wake-up call from our teachers, I changed my approach. I made sure that I started off my programs small, and gradually and carefully added functionalities ontop of these programs. Using this approach meant that I could methodically add functionalities without breaking a program.
@@ -62,7 +59,7 @@ This method generated a stable base for me to iteratively build on. Whereupon I 
 #### **Reflection**
 I think this was a good method of fixing the situation. After having this stable base, I could make things look pretty and neat. I noticed that rigorously testing a small part was a good way to write working code. Another nice feature of this workflow, was if I found an unusual output, something I didn't expect. I could trace it back and find out which part of the code contained the bug.
 
-## Learning Objectives
+## <a id="learning-objectives"></a>Learning Objectives
 For this project I set the following learning objectives when I started:
 - Develop a strong foundation in programming and data analysis techniques, including proficiency in Python and experience with statistical and machine learning methods. 
 - Be able to identify and solve real-world problems using data-driven approaches, including the ability to formulate research questions, collect and clean data, apply appropriate statistical and machine learning techniques, and communicate findings effectively.
@@ -86,7 +83,7 @@ The result of this action was that my teammates helped me with the parts I strug
 #### **Reflection**
 I think the approach I took was definitely good. I don't think I'd choose a different action the next time I get into this situation. Of course this does assume I've got a group of students following the same course there to help me. If I wouldn't have this, I'd have chosen a different approach.
 
-## Group Reflection/Evaluation
+## <a id="evaluation-of-the-group-project"></a>Group Reflection/Evaluation
 I really enjoyed working with my project group. This has been one of the better groups I've done projects with. However, this does not mean this entire project went without a hitch. In the sections below, I will be evaluating each project member seperately.
 
 ### Jesse
@@ -120,28 +117,24 @@ This meant that we wouldn't get stopped or held back by other teammates, and thu
 #### **Reflection**
 This method proved effective since most teammates now know the inns and outs of their own model. Ontop of that, teammates were able to approach other teammates in case they had any questions.
 
-## Contributions
+## <a id="contributions"></a>Contributions
 
 Here are some tasks I contributed on per project:
 
 **FoodBoost**
-- [Filtered the dataset to drop recipes with nuts]()
-- [Applied a PCA model on our case]()
-- [Thought of a way to structure data for the final model]()
-- [Created a profile generator based on labels]()
-- [Created the first Decision Tree Classifier we trained]()
+- [Filtered the dataset to drop recipes with nuts](Notebooks/foodboostFinal.ipynb)
+- [Applied a PCA model on our case](Notebooks/pca.ipynb)
+- [Thought of a way to structure data for the final model](Notebooks/foodboostFinal.ipynb)
+- [Created a profile generator based on labels](Notebooks/userdatagenerationfoodboost.ipynb)
+- [Created the first Decision Tree Classifier we trained](Notebooks/foodboostFinal.ipynb)
 
 **Containers**
-- [Created a GUI for the project using PyGame]()
-- [Created an underlying system for moving containers and checking whether the move is legal]()
-- [Created a function that converts list of containers to heightmap]()
-- [Created multiple environments]()
-- Created multiple agents [DQN](), [CNN (with Jesse)]()
-- [Changed our observation/action space (twice)]()
-- []()
-
-- [REMOVE THIS](notebooks/Reconstructie%20Paper%20Model.ipynb)
-- [REMOVE THIS](#visualization-and-further-exploration-of-the-data)
+- [Created a GUI for the project using PyGame](Notebooks/contianergamesource.ipynb)
+- [Created an underlying system for moving containers and checking whether the move is legal](Notebooks/)
+- [Created a function that converts list of containers to heightmap](Notebooks/HeightMap.ipynb)
+- [Created multiple environments](Notebooks/)
+- Created multiple agents [DQN](Notebooks/DQNMartti.ipynb), [CNN (with Jesse)](Notebooks/CNNJesseMartti.ipynb)
+- [Changed our observation/action space (twice)](Notebooks/DQNMartti.ipynb)
 
 Here I will reflect on a situation using STARR:
 
@@ -165,9 +158,9 @@ I think this change was a beneficial one. Since making this change showed me tha
 
 
 [Back to Table of Contents](#table-of-contents)
-# 1. The Project | 100% done
+# <a id="the-project"></a>1. The Project | 100% done
 There were two projects we worked on. The first project is Foodboost, and the second project is containers. I will cover both of them seperately here.
-## Foodboost
+##  <a id="the-project-foodboost"></a>Foodboost
 Project foodboost was aimed at creating a recommendation system for users with a nut allergy. This project benefits me personally, since there's often a limited choice for me when it comes to food.
 
 For project foodboost, we set the following research questions:
@@ -204,9 +197,9 @@ To create a diet schedule with as much variety as possible, we used a Linear Pro
 
 ### Planning
 In the beginning, our plan was to use trello as a place where we could update each other on the advancements we made on our project. Eventually, we ended up forgetting about trello entirely, since we had to focus on getting things done rather than planning.
-<details><summary>Planning Foodboost</summary><img src="images/trellofood.png"></details>
+<details><summary>Planning Foodboost</summary><img src="images/TrelloFood.png"></details>
 
-## Containers
+## <a id="the-project-containers"></a>Containers
 This case covers the sorting problem when it comes to unloading and loading containers between ship and shore. 
 
 For project containers, we set the following research questions:
@@ -250,14 +243,14 @@ Our model uses priority tags for every container. The priority tag pertains to w
 
 ### Planning
 For this project we also decided on using Trello again. Eventually though, we forgot about it again. Nevertheless, we all knew what was going on and what the tasks were that we had to complete.
-<details><summary>Planning Containers</summary><img src="images/trello.png"></details>
+<details><summary>Planning Containers</summary><img src="images/Trello.png"></details>
 
 
 [Back to Table of Contents](#table-of-contents)
-# 2. Predictive Models | 90% done
+# <a id="predictive-models"></a>2. Predictive Models | 90% done
 
 I have made the following predictive models. I will seperate them per project.
-## Project Foodboost
+## <a id="predictive-models-foodboost"></a>Project Foodboost
 Project foodboost was mainly based around basic machine learning models. During this project I also experimented with Principal Component Analysis (PCA). These predictive models were eventually supposed to recommend recipes to users. 
 
 ### PCA 
@@ -277,7 +270,7 @@ This approach was based on a 2022 [paper written by Trevor Hastie, Michael Green
 
 In the new version of this case, we used the Albert Heijn dataset to extract recipe information. This recipe information included ingredients and tags. Using this data, I created a predictive model that was able to train for recommendations for a singular user. To generate the data, I first had to define what tags the user liked, and what tags the user disliked. Using these tags, I was able to randomly pick recipes from those tags. I would extract the ingredients from these recipes, this would be the ``X`` dataset that our predictive model would train on. As for our ``y`` dataset, I set this to 0 for "disliking" a recipe and 1 for "liking" a recipe respectively. Therefore, I generated a dataset with a specific structure in it for our predictive model to train on. My project group decided on having everyone try a different classifier model on the generated dataset. I ended up using ``Decision Tree Classifier`` (as recommended by my group). Using a confusion matrix  to compare this with other models, we were able to deduct that a ``Decision Tree Classifier`` yielded the best results.
 
-## Project Containers
+## <a id="predictive-models-containers"></a>Project Containers
 
 Project containers used a completely different approach to a predictive model. Since this project heavily relied on reinforcement learning, I created my own [``Agent``](), [``Environment``](), and [``Neural Network``]() in pytorch. This environment ended up going through several different iterations. 
 
@@ -301,13 +294,13 @@ The Fourth iteration seemed to perform way better than all previous iterations. 
 There are two features to this graph that need some explaining. First off the theoretical maximum is based on the absolute maximum score that our environment can put out. Our model will never be able to score beyond that value. Secondly, these 79200 games took around one and a half hours to complete. This may seem long, however, this does not impact the eventual prediction speed.
 
 [Back to Table of Contents](#table-of-contents)
-# 3. Domain Knowledge | 70% done
+# <a id="domain-knowledge"></a>3. Domain Knowledge | 70% done
 Foodboost applies data science is mainly aimed towards end users and their diets. Because we're dealing with allergens, there needs to be a clear understanding what ingredients contain nuts and which ones don't. This is why the first research question for this project is ``1. What ingredients can be considered as a nut?``. 
 
 The container project applies data science to logistics transportation. Our project is based around sorting containers in a plot, and effectively and efficiently creating a layout for this plot to reduce the time it takes to unload containers. It is imperative for this process to be efficient, since when a ship is a few minutes late, they risk getting hefty fines.
 
 
-## Literature
+## <a id="domain-knowledge-literature"></a>Literature
 For the first project, I mainly got my knowledge from Datacamp. Besides that, I also used scikit-learn's website find the documentation for the classifiers we needed
 * [Decision Tree Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 
@@ -324,13 +317,13 @@ Furthermore, I also read a few articles about DQN from pytorch itself:
 * [REINFORCEMENT LEARNING (DQN) TUTORIAL](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
 * [Q-Learning](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-learning)
 
-## Terminology
+## <a id="domain-knowledge-terminology"></a>Terminology
 
 
 [Back to Table of Contents](#table-of-contents)
-# 4. Data Preprocessing | 80% done
+# <a id="data-preprocessing"></a>4. Data Preprocessing | 80% done
 Here I will cover the data preprocessing for the two projects I've worked on.
-## Project Foodboost
+## <a id="data-preprocessing-foodboost"></a>Project Foodboost
 For project Foodboost, we were given a lot of recipe data. In our case, not all of this data was useful. Eventually we ended up only using the `ingredients.csv` and `tags.csv` dataset.
 
 ### Filtering nuts
@@ -401,7 +394,7 @@ To generate an artificial list of recipes the user would like and dislike, I cho
 After this, we split the ``preference dataset`` into a train, test and validation dataset. This is done so we can evaluate our model.
 
 
-## Project Containers
+## <a id="data-preprocessing-containers"></a>Project Containers
 Data preprocessing is a little bit different when it comes to reinforcement learning. The way our RL-agent learns is through observing the effect of its actions on a specific environment. This means I have to first collect data to train on.
 
 ### Data collection
@@ -413,7 +406,7 @@ To visualise the outcome of our game, I created a render of these containers.
 <video src="images/FullSolution0001-0080.mp4" controls="controls" style="max-width: 730px;"></video>
 
 [Back to Table of Contents](#table-of-contents)
-# 5. Communication
+# 5. <a id="communication"></a>Communication
 
 ## Presentations
 
