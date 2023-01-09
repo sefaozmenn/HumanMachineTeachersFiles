@@ -9,7 +9,7 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
   - [Datacamp assignments](#datacamp-assignments)
   - [Personal Reflection](#personal-reflection)
   - [Personal Learning Objectives](#personal-learning-objectives)
-  - [Evaluation of the group project](#evaluation-of-the-group-project)
+  - [Group Reflection/Evaluation](#group-reflection/evaluation)
 - [1. The Project](#1-the-project)
   - [Future work](#future-work)
   - [Conculsions](#conculsions)
@@ -32,7 +32,7 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 
 ---
 
-# Obligatory Criteria
+# <a id="obligatory-criteria"></a>Obligatory Criteria
 ## Datacamp assignments
 
 - 5 / 12 / 2022 Datacamp progress
