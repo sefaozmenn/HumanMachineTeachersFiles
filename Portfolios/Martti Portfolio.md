@@ -318,6 +318,20 @@ Furthermore, I also read a few articles about DQN from pytorch itself:
 * [Q-Learning](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-learning)
 
 ## <a id="domain-knowledge-terminology"></a>Terminology
+<details>
+<summary>
+In the project there are some terms and jargon that might need to be explained:
+</summary>
+
+- Principal Component Analysis
+
+    Principal component analysis (PCA) is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. 
+
+- Q-Learning
+    
+    Q-learning is a model-free reinforcement learning algorithm to learn the value of an action in a particular state. Thus choosing the best possible value for each action.
+    
+</details>
 
 
 [Back to Table of Contents](#table-of-contents)
