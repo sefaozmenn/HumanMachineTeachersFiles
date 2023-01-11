@@ -13,7 +13,7 @@ This is Martti Groenens portfolio for Applied Data Science. This is where I docu
 - [1. The Project](#the-project)
   - [Foodboost](#the-project-foodboost)
   - [Containers](#the-project-containers)
-- [2. Predictive Analysis](#predictive-models)
+- [2. Predictive Models](#predictive-models)
   - [Foodboost (PCA/Decision Tree Classifier)](#predictive-models-foodboost)
   - [Container (Reinforcement Learning)](#predictive-models-containers)
 - [3. Domain Knowledge](#domain-knowledge)
