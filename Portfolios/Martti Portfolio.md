@@ -425,6 +425,7 @@ To visualise the outcome of our game, I created a render of these containers.
 ## Presentations
 
 During this minor I have presented 5 presentations.
+
 Foodboost
   - [Week 4](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/EREzdxKVfO5On9fJeAwlL3sBuM8olE7zrZ8Do1A4jiYn9Q?e=IJP1iR)
   - [Week 6](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/ETyqy6lFUH1AqeimVRBNTJcBohdS_jNyWjtYnr0ejcmSTg?e=IWRUJ3)
