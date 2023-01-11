@@ -424,7 +424,17 @@ To visualise the outcome of our game, I created a render of these containers.
 
 ## Presentations
 
-During this minor I have presented about 3 to 4 presentations. TODO: What were they abt and a link to the presentations 
+During this minor I have presented 5 presentations.
+Foodboost
+  - [Week 4](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/EREzdxKVfO5On9fJeAwlL3sBuM8olE7zrZ8Do1A4jiYn9Q?e=IJP1iR)
+  - [Week 6](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/ETyqy6lFUH1AqeimVRBNTJcBohdS_jNyWjtYnr0ejcmSTg?e=IWRUJ3)
+
+
+Container
+  - [Week 10](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/Ec9LBKBYu1lMvo8HDcndIxcB65UjlLZ1YoeiWidIWBcwsg?e=6HXDNE)
+  - [Week 12](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/EYHqzsnr5lxFpBu2vs2Kf3sBsvPgKVAjllvQ_WmBAPThVg?e=SSyPg9)
+  - [Week 16](https://dehaagsehogeschool.sharepoint.com/:p:/s/MinorAppliedDataScience2022_groups-Team5/ESHwS3fok2RDmnbv_DDdmhYBkKuxJyqDVdF3DVcNUwtLcQ?e=mFOjKu)
+
 
 ## Paper
 For our paper I wrote ``insert part here``: link to paper
